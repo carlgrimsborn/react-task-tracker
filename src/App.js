@@ -5,6 +5,7 @@ import AddTask from "./components/AddTask";
 import Footer from "./components/Footer";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import About from "./components/About";
+import ErrorPage from "./components/ErrorPage";
 function App() {
   const [showAddTask, setShowAddTask] = useState(false);
   const [tasks, setTasks] = useState([]);
@@ -118,6 +119,7 @@ function App() {
             }
           ></Route>
           <Route path="/about" element={<About />} />
+          <Route path="*" element={<ErrorPage />}></Route>
         </Routes>
         <Footer />
       </div>
